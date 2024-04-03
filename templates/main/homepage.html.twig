@@ -9,3 +9,24 @@ h1><strong>Hello World !</strong></h1>
         </p>
     {% endif %}
 </div>
+
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ myShip.name }}</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>{{ myShip.class }}</td>
+        </tr>
+        <tr>
+            <th>Captain</th>
+            <td>{{ myShip.captain|upper }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ myShip.status }}</td>
+        </tr>
+    </table>
+</div>
