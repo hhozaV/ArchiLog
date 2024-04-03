@@ -1,32 +1,38 @@
-h1><strong>Hello World !</strong></h1>
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} Starshop{% endblock %}
+{% block body %}
+    <h1><strong>Hello World !</strong></h1>
 
-<div>
-    <p>
-        Nous possédons une flotte de {{  numberOfStarships }} vaisseaux spaciaux !</p>
-    {% if numberOfStarships > 400 %}
+    <div>
         <p>
-            C'est une flotte considérable !
-        </p>
-    {% endif %}
-</div>
+            Nous possédons une flotte de {{  numberOfStarships }} vaisseaux spaciaux !</p>
+        {% if numberOfStarships > 400 %}
+            <p>
+                C'est une flotte considérable !
+            </p>
+        {% endif %}
+    </div>
 
-<div>
-    <table>
-        <tr>
-            <th>Name</th>
-            <td>{{ myShip.name }}</td>
-        </tr>
-        <tr>
-            <th>Class</th>
-            <td>{{ myShip.class }}</td>
-        </tr>
-        <tr>
-            <th>Captain</th>
-            <td>{{ myShip.captain|upper }}</td>
-        </tr>
-        <tr>
-            <th>Status</th>
-            <td>{{ myShip.status }}</td>
-        </tr>
-    </table>
-</div>
+    <h2>Mon vaisseau</h2>
+
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ myShip.name }}</td>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td>{{ myShip.class }}</td>
+            </tr>
+            <tr>
+                <th>Captain</th>
+                <td>{{ myShip.captain|upper }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ myShip.status }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
